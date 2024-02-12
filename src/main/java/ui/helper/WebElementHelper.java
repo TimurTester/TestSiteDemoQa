@@ -36,7 +36,7 @@ public class WebElementHelper {
 
     public WebElementHelper scrollToElement(WebElement element){
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("argument[0].scrollIntoView(true)", element);
+        js.executeScript("arguments[0].scrollIntoView(true)", element);
         return this;
     }
 }
