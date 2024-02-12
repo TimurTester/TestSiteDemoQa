@@ -24,4 +24,23 @@ public class WindowHelper {
         Driver.getDriver().switchTo().window(windowsId.get(index));
     }
 
+    public void switchToParent(){
+        LinkedList<String> windowsId = new LinkedList<>(getWindowHandles());
+        Driver.getDriver().switchTo().window(windowsId.get(0));
+    }
+
+    public void switchToParentWithChildClose(){
+        switchToParent();
+
+        LinkedList<String> windowsId = new LinkedList<>(
+            getWindowHandles()
+        );
+
+        for(int i = 1; i < windowsId.size(); i++){
+            Driver.getDriver().switchTo().window(windowsId.get(i));
+            Driver.getDriver().close();
+        }
+        switchToParent();
+    }
+
 }

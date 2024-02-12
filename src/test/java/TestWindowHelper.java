@@ -14,5 +14,6 @@ public class TestWindowHelper {
         }
         WindowHelper windowHelper = new WindowHelper();
         windowHelper.switchToWindow(3);
+        windowHelper.switchToParentWithChildClose();
     }
 }
