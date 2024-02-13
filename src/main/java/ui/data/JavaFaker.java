@@ -5,9 +5,9 @@ import ui.entity.Employee;
 
 public class JavaFaker {
 
-    Faker faker = new Faker();
+    static Faker faker = new Faker();
 
-    public Employee createNewEmployeeWithFakeData(){
+    public static Employee createNewEmployeeWithFakeData(){
         Employee employee = new Employee();
         employee.setFirstName(faker.name().firstName());
         employee.setLastName(faker.name().lastName());
